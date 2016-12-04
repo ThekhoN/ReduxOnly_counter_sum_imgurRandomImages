@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #cccccc;
+  }
+  .Component {
+    width: 100%;
+    float: left;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #ffffff;
+    margin: 1em 0;
+  }
+  ul.imgContainer {
+    padding: 0.3em 0;
+    list-style: none;
+    background: #000;
+    margin: 1em 0;
+    text-align: center;
+  }
+  .imgContainer li {
+    background: white;
+    width: 48%;
+    display: inline-block;
+    float: none;
+    margin: 0.5% 0.4%;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .imgContainer img {
+    width: 100%;
+    height: auto;
+  }
+  .status {
+    color: white;
+    background: red;
+  }
+
+  </style>
+</head>
+<body>
+  <div>
+    <div class="Component">
+      <h2>Counter:</h2>
+      Clicked: <span id="value">0</span> times
+      <button id="decrement">Decrease</button>
+      <button id="incrementAsync">Increment async</button>
+      <br>
+      <br>CountStatus: <span id="CountStatus" class="status"></span>
+    </div>
+
+    <div class="Component">
+      <h2>Sum:</h2>
+      <input id="a" value="1" /> + <input id="b" value="2" /> = <span id="value2">?</span>
+      <button id="sum">Sum</button>
+    </div>
+
+    <div class="Component">
+      <h2>Imgur Random Image Loader:</h2>
+      imgLoadStatus: <span id="imgLoadStatus" class="status"></span>
+      <br><br>
+      <button id="getRandomImages">get random images</button>
+      <ul class="imgContainer"></ul>
+    </div>
+  </div>
+  <script src="domElements.js"></script>
+  <script src="redux.js"></script>
+  <script src="XHR_req.js"></script>
+  <script src="action/index.js"></script>
+  <script src="middleware/index.js"></script>
+  <script src="reducer/index.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
